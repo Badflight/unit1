@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Bullet test</title>
+    <script src="phaser.min.js"></script>
+    <script src="js/bullets.js"></script>
+    <script src="js/bulletTest.js"></script>
+    <style type="text/css">
+        body{
+            margin: 0;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var config ={
+            width:1280,
+            height:720,
+            backgroundColor: '#0000',
+            pixelArt: true,
+            scale:{
+                mode:Phaser.Scale.FIT,
+                autoCenter:Phaser.Scale.CENTER_BOTH
+            },
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity:{
+                        y:0
+                        
+                    },
+                    debug:true
+                }
+            },
+            scene:[BulletTest]
+        };
+        let game = new Phaser.Game(config)
+    </script>
+</body>
+</html>
